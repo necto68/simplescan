@@ -1,6 +1,7 @@
 import "@picocss/pico";
 import type { AppProps } from "next/app";
 import Head from "next/head";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -12,6 +13,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <title>Simplescan</title>
       </Head>
       <Component {...pageProps} />
+      <Analytics />
     </>
   );
 }
